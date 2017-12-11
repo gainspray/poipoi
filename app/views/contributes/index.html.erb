@@ -1,0 +1,101 @@
+<div class="container">
+  <div class="col-md-12 col-lg-12 align-self-center col-xl-12 text-center">
+    <div class="btn-group w-100">
+      <%= link_to '动画',{:controller => 'contributes', :action =>'classify', :videoclass => 'douga'}, :class => "btn btn-outline-info text-center border border-primary w-25 text-dark" %>
+      <%= link_to '番剧',{:controller => 'contributes', :action =>'classify', :videoclass => 'bangumi'}, :class => "btn btn-outline-info text-center border border-primary w-25 text-dark" %>
+      <%= link_to '音乐',{:controller => 'contributes', :action =>'classify', :videoclass => 'music'}, :class => "btn btn-outline-info text-center border border-primary w-25 text-dark" %>
+      <%= link_to '游戏',{:controller => 'contributes', :action =>'classify', :videoclass => 'game'}, :class => "btn btn-outline-info text-center border border-primary w-25 text-dark" %>
+    </div>
+  </div>
+</div>
+<div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div id="myCarousel" class="carousel slide w-100 h-100" data-ride="carousel">
+            <div class="carousel-inner w-100 h-100" role="listbox">
+              <div class="carousel-item">
+                <a href="">
+                <img class="d-block img-fluid" src="<%= asset_path("02.jpg") %>" data-holder-rendered="true">
+                <div class="carousel-caption">
+                  <h3>题目</h3>
+                  <p>介绍。。。。</p>
+                </div>
+              </a>
+              </div>
+              <div class="carousel-item active">
+              <a href="">
+                <img class="d-block img-fluid" src="<%= asset_path("03.jpg") %>" data-holder-rendered="true">
+                <div class="carousel-caption">
+                  <h3>题目</h3>
+                  <p>介绍。。。。</p>
+                </div>
+              </a>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
+          </div>
+        </div>
+        <div class="col-md-3 w-25 h-100">
+          <div class="responsive">
+              <a href="#" class="imgshow">
+                <img src="<%= asset_path("04.jpg") %>" height=150>
+                <h6 class="desc">推广</h6>
+              </a>
+          </div>
+          <div class="responsive">
+              <a href="#" class="imgshow">
+                <img src="<%= asset_path("05.jpg") %>" height=150>
+                <h6 class="desc">推广</h6>
+              </a>
+          </div>
+        </div>
+        <div class="col-md-3 w-25 h-100">
+          <div class="responsive">
+             <a href="#" class="imgshow">
+                <img src="<%= asset_path("06.jpg") %>" height=150>
+                <h6 class="desc">推广</h6>
+              </a>
+          </div>
+          <div class="responsive">
+              <a href="#" class="imgshow">
+                <img src="<%= asset_path("07.jpg") %>" height=150>
+                <h6 class="desc">推广</h6>
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="row">
+  <% @contributes.each do |i| %>
+    <div class="col-sm-6 col-md-3">
+      <a href="<%= contribute_path(i) %>" class="imgshow">
+          <%= image_tag i.image, size: "250x154" %>
+          <h6 class="desc"><%= i.videoname %></h6>
+      </a>
+    </div>
+  <% end %>
+</div>
+<nav aria-label="Page navigation" >
+  <ul class="pagination pagination-lg">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
