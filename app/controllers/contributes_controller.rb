@@ -1,5 +1,4 @@
 class ContributesController < ApplicationController
-  before_action :authenticate_user!, :except => [ :index, :classify] 
   def index
     @contributes=Contribute.all
   end

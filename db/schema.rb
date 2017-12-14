@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171206004740) do
+ActiveRecord::Schema.define(version: 20171214041515) do
 
   create_table "contributes", force: :cascade do |t|
     t.string "videoname"

@@ -12,13 +12,18 @@
     a.imgshow
     {
       border: 1px solid #FFFFFF;
+      border-radius:10px;
+      padding:3px;
       float: left;
       width: 200;
       color: black;
+      
     }
     a.imgshow:hover
     {
       border:1px solid #00FFCC;
+      border-radius:10px;
+      padding:3px;
       text-decoration:none;
       color:#00FFCC;
     }
@@ -30,7 +35,11 @@
       font-size:60px;
       text-align:left;
     }
-    .size1{font-size:25px;}
+    h1.size3{
+      font-size:35px;
+      text-align:center;
+    }
+    .size1{font-size:15px;}
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     </style>
@@ -51,7 +60,7 @@
         </button> 
         <%= link_to "登出", destroy_user_session_path, :method => :delete, :class => "btn btn-dark text-white" %>    
       <% else %>    
-        <%= link_to "注册", new_user_registration_path, :class => "btn btn-dark text-white" %> or    
+        <%= link_to "注册", new_user_registration_path, :class => "btn btn-dark text-white" %>     
         <%= link_to "登录", new_user_session_path, :class => "btn btn-dark text-white" %>    
       <% end %>   
       <%= link_to '投稿',new_contribute_path, :class => "btn btn-dark text-white" %>
